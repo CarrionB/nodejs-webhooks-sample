@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-const router = require('express-promise-router')();
-const graph = require('../helpers/graphHelper');
-const dbHelper = require('../helpers/dbHelper');
+import router from 'express-promise-router'
+import graph from '../helpers/graphHelper'
+import dbHelper from '../helpers/dbHelper'
 
 // GET /delegated/signin
-router.get('/signin', async function (req, res) {
+router.get('/signin', async (req, res) => {
   // Start the authorization code flow by redirecting the
   // browser to Microsoft identity platforms authorization URL
   const urlParameters = {
@@ -31,7 +31,7 @@ router.get('/signin', async function (req, res) {
 });
 
 // GET /delgated/callback
-router.get('/callback', async function (req, res) {
+router.get('/callback', async (req, res) => {
   // Microsoft identity platform redirects the browser here with the
   // authorization result
   const tokenRequest = {

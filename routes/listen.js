@@ -1,15 +1,15 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-const router = require('express-promise-router')();
-const graph = require('../helpers/graphHelper');
-const ioServer = require('../helpers/socketHelper');
-const dbHelper = require('../helpers/dbHelper');
-const tokenHelper = require('../helpers/tokenHelper');
-const certHelper = require('../helpers/certHelper');
+import router from 'express-promise-router';
+import graph from '../helpers/graphHelper';
+import ioServer from '../helpers/socketHelper';
+import dbHelper from '../helpers/dbHelper';
+import tokenHelper from '../helpers/tokenHelper';
+import certHelper from '../helpers/certHelper';
 
 // POST /listen
-router.post('/', async function (req, res) {
+router.post('/', async (req, res) => {
   // This is the notification endpoint Microsoft Graph sends notifications to
 
   // If there is a validationToken parameter

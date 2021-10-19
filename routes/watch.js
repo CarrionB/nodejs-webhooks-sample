@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-const router = require('express-promise-router')();
-const graph = require('../helpers/graphHelper');
+import router from 'express-promise-router';
+import graph from'../helpers/graphHelper';
 
 // GET /watch
-router.get('/', async function (req, res) {
+router.get('/', async (req, res) => {
   const userAccountId = req.session.userAccountId;
   const subscriptionId = req.session.subscriptionId;
   const user = req.session.user;
