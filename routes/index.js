@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import express from 'express';
+const express = require('express');
 const router = express.Router();
 
 // GET /
